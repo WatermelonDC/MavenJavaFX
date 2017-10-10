@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.watermelondc.app.controllers.EditDialogController">
+   <left>
+      <VBox BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Наименование">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+               </VBox.margin>
+            </Label>
+            <Label text="Текст заметки">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+               </VBox.margin>
+            </Label>
+            <Label text="Дата исполнения">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="130.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </BorderPane.margin>
+      </VBox>
+   </left>
+   <center>
+      <VBox prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="tfName" promptText="Например: Список покупок">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </TextField>
+            <TextArea fx:id="tfTask" prefHeight="100.0" promptText="Например: Молоко, капуста, виноград, папайя" wrapText="true">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </TextArea>
+            <HBox prefWidth="200.0">
+               <children>
+                  <Label text="Максимальное количество символов: 100">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <DatePicker fx:id="dtToDo" editable="false" onAction="#updateDate" prefHeight="25.0" prefWidth="270.0" showWeekNumbers="true">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="20.0" />
+               </VBox.margin>
+            </DatePicker>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </BorderPane.margin>
+      </VBox>
+   </center>
+   <bottom>
+      <HBox prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btnOk" defaultButton="true" mnemonicParsing="false" onAction="#actionSave" text="Принять">
+               <HBox.margin>
+                  <Insets bottom="20.0" left="100.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="btnCancel" cancelButton="true" mnemonicParsing="false" onAction="#actionClose" text="Отмена">
+               <HBox.margin>
+                  <Insets bottom="20.0" left="100.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </bottom>
+</BorderPane>
